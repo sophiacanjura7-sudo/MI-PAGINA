@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gracias Dani ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="petalos"></div>
+
+<div class="contenedor">
+
+<div id="sobre" onclick="abrirCarta()">
+
+<div class="tapa"></div>
+
+<div class="carta">
+
+💌
+
+</div>
+
+</div>
+
+<div id="mensaje" class="oculto">
+
+<h1>Para Dani 🌸</h1>
+
+<p id="texto"></p>
+
+<button onclick="final()">
+
+Un último mensaje ❤️
+
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
