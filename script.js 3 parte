@@ -1,0 +1,77 @@
+const mensaje =
+
+`HOLITAS!...
+
+Gracias por llevarnos hasta Multi sin negarte.
+
+Gracias por habernos acompañado y hasta ayudarnos a elegir.
+
+y por traernos de regreso.
+
+Tal vez para ti solo fue un favor...
+
+Pero para nosotros fue un gesto muy bonito.
+
+Eres una persona maravillosa.
+
+Esperamos que siempre conserves esa forma tan linda de ser.
+
+Con muchísimo cariño...
+
+❤️ Gracias por todo, Dani. ❤️`;
+
+function abrirCarta(){
+
+document.querySelector(".tapa").style.transform="rotateX(180deg)";
+
+setTimeout(()=>{
+
+document.getElementById("mensaje").style.display="block";
+
+escribir();
+
+},900);
+
+}
+
+let i=0;
+
+function escribir(){
+
+if(i<mensaje.length){
+
+document.getElementById("texto").innerHTML+=mensaje.charAt(i);
+
+i++;
+
+setTimeout(escribir,40);
+
+}
+
+}
+
+function final(){
+
+alert("🌸 Gracias por regalarnos tu tiempo.\n\nNunca cambies, Dani. ❤️");
+
+}
+
+for(let i=0;i<45;i++){
+
+let p=document.createElement("div");
+
+p.className="petalo";
+
+p.innerHTML="🌸";
+
+p.style.left=Math.random()*100+"vw";
+
+p.style.animationDuration=(Math.random()*6+6)+"s";
+
+p.style.fontSize=(Math.random()*18+18)+"px";
+
+p.style.animationDelay=Math.random()*5+"s";
+
+document.body.appendChild(p);
+
+}
