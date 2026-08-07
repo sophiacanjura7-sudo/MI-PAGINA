@@ -1,77 +1,117 @@
-const mensaje =
+const mensaje = `Holitas:
 
-`HOLITAS!...
+Grachitas !!!!
 
-Gracias por llevarnos hasta Multi sin negarte.
+por llevarnos hasta Multi sin negarte.
 
-Gracias por habernos acompañado y hasta ayudarnos a elegir.
+Gracias por esperarnos y tenernos paciencia.
 
-y por traernos de regreso.
+y gracias por traernos de regreso.
 
-Tal vez para ti solo fue un favor...
+puede que sea poco pero para nosotras valio muchitooo
 
-Pero para nosotros fue un gesto muy bonito.
+eres una increible persona.
 
-Eres una persona maravillosa.
+te lo agradecemos demaciadooooooooo, como no tienes idea alguna.
 
 Esperamos que siempre conserves esa forma tan linda de ser.
 
-Con muchísimo cariño...
+Solo por eso mereces muchas cosquillas ...
 
-❤️ Gracias por todo, Dani. ❤️`;
+🌸 Gracias por todo, Dani. 🌸`;
 
-function abrirCarta(){
+const envelope = document.getElementById("envelope");
+const cover = document.querySelector(".cover");
+const card = document.getElementById("card");
+const text = document.getElementById("text");
+const button = document.getElementById("finish");
 
-document.querySelector(".tapa").style.transform="rotateX(180deg)";
+let escrito = false;
 
-setTimeout(()=>{
+envelope.addEventListener("click", () => {
 
-document.getElementById("mensaje").style.display="block";
+    if(escrito) return;
 
-escribir();
+    cover.style.transform = "rotateX(180deg)";
+    envelope.style.transform = "translateY(-20px)";
 
-},900);
+    setTimeout(() => {
+        card.style.display = "block";
+        escribirTexto();
+        crearPetalos();
+    }, 800);
+
+    escrito = true;
+
+});
+
+function escribirTexto(){
+
+    let i = 0;
+
+    function escribir(){
+
+        if(i < mensaje.length){
+
+            text.innerHTML += mensaje.charAt(i);
+
+            i++;
+
+            setTimeout(escribir,30);
+
+        }
+
+    }
+
+    escribir();
+
+}
+
+button.addEventListener("click",()=>{
+
+    alert("❤️ Gracias por ser una persona tan increíble.\n\nNunca cambies, Dani. 🌸");
+
+});
+
+function crearPetalos(){
+
+    for(let i=0;i<30;i++){
+
+        let petalo=document.createElement("div");
+
+        petalo.innerHTML="🌸";
+
+        petalo.style.position="fixed";
+        petalo.style.left=Math.random()*100+"vw";
+        petalo.style.top="-20px";
+        petalo.style.fontSize=(18+Math.random()*18)+"px";
+        petalo.style.pointerEvents="none";
+        petalo.style.animation=`caer ${5+Math.random()*5}s linear infinite`;
+
+        document.body.appendChild(petalo);
+
+    }
 
 }
 
-let i=0;
+const estilo=document.createElement("style");
 
-function escribir(){
+estilo.innerHTML=`
 
-if(i<mensaje.length){
+@keyframes caer{
 
-document.getElementById("texto").innerHTML+=mensaje.charAt(i);
+0%{
+transform:translateY(-50px) rotate(0deg);
+opacity:1;
+}
 
-i++;
-
-setTimeout(escribir,40);
-
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:.8;
 }
 
 }
 
-function final(){
+`;
 
-alert("🌸 Gracias por regalarnos tu tiempo.\n\nNunca cambies, Dani. ❤️");
-
-}
-
-for(let i=0;i<45;i++){
-
-let p=document.createElement("div");
-
-p.className="petalo";
-
-p.innerHTML="🌸";
-
-p.style.left=Math.random()*100+"vw";
-
-p.style.animationDuration=(Math.random()*6+6)+"s";
-
-p.style.fontSize=(Math.random()*18+18)+"px";
-
-p.style.animationDelay=Math.random()*5+"s";
-
-document.body.appendChild(p);
-
-}
+document.head.appendChild(estilo);
