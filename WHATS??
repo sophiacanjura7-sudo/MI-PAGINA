@@ -1,49 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias Dani ❤️</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-<title>Gracias Dani ❤️</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div id="petalos"></div>
+<div class="background"></div>
 
-<div class="contenedor">
+<div class="container">
 
-<div id="sobre" onclick="abrirCarta()">
+    <div id="envelope" onclick="openLetter()">
+        <div class="cover"></div>
+        <div class="letter">
+            💌
+        </div>
+    </div>
 
-<div class="tapa"></div>
+    <div id="message" class="hidden">
 
-<div class="carta">
+        <h1>Para TÚ 🌸</h1>
 
-💌
+        <p id="typing"></p>
 
-</div>
+        <button onclick="showFinalMessage()">
+            ❤️ Un último mensaje
+        </button>
 
-</div>
-
-<div id="mensaje" class="oculto">
-
-<h1>Para Dani 🌸</h1>
-
-<p id="texto"></p>
-
-<button onclick="final()">
-
-Un último mensaje ❤️
-
-</button>
-
-</div>
+    </div>
 
 </div>
 
