@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gracias Dani ❤️</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<title>PARA TÚ 💖</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 <div class="background"></div>
 
+<div class="stars"></div>
+
 <div class="container">
 
-    <div id="envelope" onclick="openLetter()">
+    <div id="envelope">
+
         <div class="cover"></div>
+
         <div class="letter">
-            💌
+
+            <h1>💌</h1>
+
+            <h2>Para Dani</h2>
+
+            <p>
+
+                Haz clic para abrir esta pequeña y diminuta carta...
+
+            </p>
+
         </div>
+
     </div>
 
-    <div id="message" class="hidden">
+    <div id="card">
 
-        <h1>Para TÚ 🌸</h1>
+        <h1>🌸 GRACHUUUUU 🌸</h1>
 
-        <p id="typing"></p>
+        <p id="text"></p>
 
-        <button onclick="showFinalMessage()">
-            ❤️ Un último mensaje
+        <button id="finish">
+
+            ❤️ Un último mensaje ❤️
+
         </button>
 
     </div>
@@ -40,4 +61,5 @@
 <script src="script.js"></script>
 
 </body>
+
 </html>
